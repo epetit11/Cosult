@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Communes</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -15,20 +15,7 @@
 <body>
 
 <div class="container" >
-  <h2>Retrouver le taux de résultat de votre commune </h2>
-  
-  </br>
-  </br>
-
-  <form class="form-inline" role="form" action="communes" method="get">
-    <div class="form-group">
-      
-      <input type="number" class="form-control" name="code_postal" placeholder="Entrer le code postal">
-    </div>
-    
-    
-    <button type="submit" class="btn btn-default">Rechercher</button>
-  </form>
+	${codePostal}
 </div>
 
 </body>
