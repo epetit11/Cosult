@@ -19,8 +19,12 @@
   
   </br>
   </br>
+  
+  <p>
+	${messageError }
+  </p>
 
-  <form class="form-inline" role="form" action="communes" method="get">
+  <form class="form-inline" role="form" action="recherche" method="post">
     <div class="form-group">
       
       <input type="number" class="form-control" name="code_postal" placeholder="Entrer le code postal">
