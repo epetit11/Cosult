@@ -24,9 +24,11 @@ public class RechercheServlet extends HttpServlet {
 	public void doPost( HttpServletRequest request, HttpServletResponse response ) 
 			 throws ServletException, IOException {
 		
+		int compteur=0;
 		String codePostal= request.getParameter("code_postal");
 		String codeInsee = null;
 		String message;
+		String message2;
 		String etablissement;
 		int nombreColonnes=0;
 		List<Projet> projectsOfOwner = new LinkedList<Projet>();
@@ -67,13 +69,26 @@ public class RechercheServlet extends HttpServlet {
 					
 					co= new Code(result.getString("codeInsee"), result.getString("codePostal"));
 					code.add(co);
+					compteur++;
 					
 					
 				}
 				
+				if(compteur>0){
+					
+				message = "Le code postal que vous avez entré correspond à une ou plusieurs communes.";
+	            request.setAttribute( "messageError", message );
 				request.setAttribute( "liste", code );
 				 
 				 this.getServletContext().getRequestDispatcher( "/commune.jsp" ).forward( request, response );
+				}
+				
+				else
+				{
+					message = "Ce code postal n'existe pas. Entrez un code postal correct";
+		            request.setAttribute( "messageError", message );
+		            this.getServletContext().getRequestDispatcher( "/index.jsp" ).forward( request, response );
+				}
 				
 				//System.out.println("le code insee est "+codeInsee);
 				

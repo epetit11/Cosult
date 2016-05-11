@@ -25,6 +25,7 @@
   </p>
 
   <form class="form-inline" role="form" action="recherche" method="post">
+	<label for="code-postal">Entrez un code postal</label>  
     <div class="form-group">
       
       <input type="number" class="form-control" name="code_postal" placeholder="Entrer le code postal">

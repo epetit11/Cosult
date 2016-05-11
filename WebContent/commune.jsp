@@ -29,7 +29,7 @@
 								<tr><th>CODE INSEE</th><th>CODE POSTAL</th></tr>
 								<c:forEach items="${liste}" var="emp">
 									<tr>
-										<td><c:out value="${emp.getCodeInsee()}"></c:out></td>
+										<td><a href="${pageContext.request.contextPath}/compare?codeInsee=${emp.getCodeInsee()}"><c:out value="${emp.getCodeInsee()}"></c:out></a></td>
 										<td><c:out value="${emp.getCodePostal()}"></c:out></td>
 										
 									</tr>

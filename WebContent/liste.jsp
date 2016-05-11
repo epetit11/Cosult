@@ -48,6 +48,10 @@
 								</c:forEach>
 							</tbody>
 						</table>
+						
+						</br>
+						</br>
+						<a href="index.jsp"> <button>Effectuer une nouvelle recherche </button> </a>
   
   
 </div>
