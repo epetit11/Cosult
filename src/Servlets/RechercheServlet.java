@@ -1,3 +1,4 @@
+package Servlets;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,7 +46,7 @@ public class RechercheServlet extends HttpServlet {
 				Class.forName("com.mysql.jdbc.Driver");
 				System.out.println("Driver OK");
 				
-				String url="jdbc:mysql://localhost/test";
+				String url="jdbc:mysql://localhost/projetjee";
 				String user="root";
 				String passwordBdd="";
 				
